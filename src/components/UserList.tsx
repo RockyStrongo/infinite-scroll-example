@@ -26,7 +26,7 @@ export default function UserList({ initialUsers }: UserListProps) {
     if (inView) {
       loadMoreUsers()
     }
-  }, [inView])
+  }, [inView, loadMoreUsers])
 
   return (
     <div className='flex flex-col gap-3'>
