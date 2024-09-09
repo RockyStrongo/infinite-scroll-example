@@ -1,6 +1,5 @@
 //actions/getUsers.ts
 'use server'
-import { UserAPIResponse } from '@/types/User'
 
 export const getUsers = async (offset: number, limit: number) => {
   try {

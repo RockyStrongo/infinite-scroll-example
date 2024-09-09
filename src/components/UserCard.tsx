@@ -1,5 +1,4 @@
 'use client'
-import { User } from '@/types/User'
 
 type UserProps = {
   user: User
