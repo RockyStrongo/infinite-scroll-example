@@ -1,6 +1,5 @@
 // components/UserList.tsx
 'use client'
-import { User } from '@/types/User'
 import UserCard from './UserCard'
 import { useEffect, useState } from 'react'
 import { getUsers } from '@/actions/getUsers'
@@ -19,8 +18,8 @@ export default function UserList({ initialUsers }: UserListProps) {
 
   const loadMoreUsers = async () => {
     const apiUsers = await getUsers(offset, NUMBER_OF_USERS_TO_FETCH)
-    setUsers([...users, ...apiUsers])
-    setOffset(offset + NUMBER_OF_USERS_TO_FETCH)
+    setUsers(users => [...users, ...apiUsers])
+    setOffset(offset => offset + NUMBER_OF_USERS_TO_FETCH)
   }
 
   useEffect(() => {

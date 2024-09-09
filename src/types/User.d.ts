@@ -1,4 +1,4 @@
-export interface User {
+declare interface User {
   id: number
   gender: string
   date_of_birth: string
@@ -17,7 +17,7 @@ export interface User {
   longitude: number
 }
 
-export interface UserAPIResponse {
+declare interface UserAPIResponse {
     success: boolean
     message: string
     total_users: number
